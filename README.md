@@ -1,8 +1,6 @@
 # php7-cascade-ws-ns
 <p>This is the new home of SUNY Upstate's Cascade web service library.</p>
-
 <p>This library was started by and almost exclusively built by <a href="https://github.com/wingmingchan">Wing Ming Chan</a>. We would like to extend a huge thank you to Wing for all of his hard work and dedication in making this the most comprehensive tool for interacting with Cascade CMS's web services.</p>
-
 <p>Wing is a huge proponent of creating reusable code which adheres to OOP best practices and we will uphold those values as we continue updating the library well after Wing retires from SUNY Upstate.</p>
 
 <h2>About</h2>
