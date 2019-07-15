@@ -1,5 +1,5 @@
 # php7-cascade-ws-ns
-<p>cascade_ws_ns7_8.13.0 is in progress.</p>
+<p><span style="font-weight:bold;">cascade_ws_ns7_8.13.0 is in progress.</span></p>
 
 <p>The Upstate Cascade web service library, using namespaces, written in PHP 7 for Cascade 8.11/8.12, by German Drulyk and Wing Ming Chan.</p>
 
