@@ -40,13 +40,13 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/workflow_email.php">workflow_definition.php</a></li></ul>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/workflow_email.php">workflow_email.php</a></li></ul>
 <h2>JSON Dump</h2>
 <pre>http://mydomain.edu:1234/api/v1/read/workflowemail/dd1cc5488b7ffea932e15180b524fa3c
 
 {
   "asset":{
-    "workflowDefinition":{
+    "workflowEmail":{
         "subject": "A new subject line",
         "body": "A new body",
         "parentContainerId": "dcee71f28b7ffea932e15180ae5fe835",
