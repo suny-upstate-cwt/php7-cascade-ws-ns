@@ -21,7 +21,7 @@ use cascade_ws_property  as p;
 <description><h2>Introduction</h2>
 <p>The <code>Format</code> class is the superclass of <code>ScriptFormat</code> and <code>XsltFormat</code>. It is an abstract class and defines all methods shared by the two sub-classes.</p>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/format.php">format.php</a></li>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/format.php">format.php</a></li>
 </ul></postscript>
 </documentation>
 */

@@ -135,7 +135,7 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/publish_set.php">publish_set.php</a></li></ul>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/publish_set.php">publish_set.php</a></li></ul>
 <h2>JSON Dump</h2>
 <pre>http://mydomain.edu:1234/api/v1/read/publishset/28a960258b7ffe8343b94c282741f634
 

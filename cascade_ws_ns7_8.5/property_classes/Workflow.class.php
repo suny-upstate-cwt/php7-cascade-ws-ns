@@ -77,8 +77,8 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/property-class-test-code/workflow.php">workflow.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/recipes/workflow/transition.php">transition.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/property-class-test-code/workflow.php">workflow.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/recipes/workflow/transition.php">transition.php</a></li></ul></postscript>
 </documentation>
 */
 class Workflow extends Property

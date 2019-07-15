@@ -91,7 +91,7 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/wp_connector.php">wp_connector.php</a></li></ul>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/wp_connector.php">wp_connector.php</a></li></ul>
 <h2>JSON Dump</h2>
 <pre>http://mydomain.edu:1234/api/v1/read/wordpressconnector/243c73ba8b7ffe8343b94c28ebf34eb1
 

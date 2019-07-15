@@ -32,7 +32,7 @@ use cascade_ws_property  as p;
 <h2>Design Issues</h2>
 <p>Currently, the metadata set ID can be read from a file or symlink property. But it is not possible for a page. Instead, the ID can only be read through the associated content type. Before this class processes the metadata, the <code>ContentType</code> object associated with a page must be passed into this class from <code>Page</code>. Therefore, I have to provide a <code>setPageContentType</code> method in this class to allow that. This method only works for a <code>Page</code> object, or a <code>WrongAssetTypeException</code> will be thrown.</p>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/linkable.php">linkable.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/linkable.php">linkable.php</a></li></ul></postscript>
 </documentation>
 */
 abstract class Linkable extends DublinAwareAsset

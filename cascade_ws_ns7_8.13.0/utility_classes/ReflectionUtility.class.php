@@ -35,7 +35,7 @@ methods are used to generate documentation pages in the web-services site.
 The value of the <code>$obj</code> variable in these methods can be an object of any class,
 or a string (the full name of a class to be inspected).</p>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/reflection-utility.php">reflection-utility.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/reflection-utility.php">reflection-utility.php</a></li></ul></postscript>
 </documentation>
 */
 class ReflectionUtility

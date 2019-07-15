@@ -272,9 +272,9 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/page.php">page.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/page2.php">page2.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/tree/master/recipes/pages">Page Recipes</a></li>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/page.php">page.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/page2.php">page2.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/tree/master/recipes/pages">Page Recipes</a></li>
 
 </ul>
 <h2>JSON Dump</h2>

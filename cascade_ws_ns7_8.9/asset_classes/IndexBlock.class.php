@@ -171,8 +171,8 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/index_block_folder.php">index_block_folder.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/index_block_content.php">index_block_content.php</a></li></ul>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/index_block_folder.php">index_block_folder.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/index_block_content.php">index_block_content.php</a></li></ul>
 <h2>JSON Dump</h2>
 <pre>http://mydomain.edu:1234/api/v1/read/block_INDEX/987203c88b7ffe8353cc17e9ed0bab6c
 

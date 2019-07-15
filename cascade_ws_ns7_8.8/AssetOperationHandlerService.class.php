@@ -138,7 +138,7 @@ $doc_string .= "</pre><h3>Binding</h3><pre>";
 $doc_string .= $eval->replaceBrackets($service->getBinding());
 $doc_string .= "</pre>";
 return $doc_string; ?></description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/tree/master/working-with-AssetOperationHandlerService">working-with-AssetOperationHandlerService</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/tree/master/working-with-AssetOperationHandlerService">working-with-AssetOperationHandlerService</a></li></ul></postscript>
 <advanced>
 </advanced>
 </documentation>

@@ -56,7 +56,7 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/ftp_transport.php">ftp_transport.php</a></li></ul>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/ftp_transport.php">ftp_transport.php</a></li></ul>
 <h2>JSON Dump</h2>
 <pre>http://mydomain.edu:1234/api/v1/read/transport/2844531b8b7ffe8343b94c28ccbfc7f7
 

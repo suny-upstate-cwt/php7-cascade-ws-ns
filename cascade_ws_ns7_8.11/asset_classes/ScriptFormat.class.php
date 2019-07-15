@@ -47,7 +47,7 @@ $doc_string .=
 return $doc_string;
 ?>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/script_format.php">script_format.php</a></li></ul>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/script_format.php">script_format.php</a></li></ul>
 <h2>JSON Dump</h2>
 <pre>http://mydomain.edu:1234/api/v1/read/format_SCRIPT/c12ed4e58b7ffe83129ed6d8d7ef4a97
 

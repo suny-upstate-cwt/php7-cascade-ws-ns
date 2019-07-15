@@ -37,7 +37,7 @@ u\ReflectionUtility::showFunctionSignature( "str_replace", true );
 <li>Online tutorial recordings:
 <ul><li>The first series: https://www.youtube.com/playlist?list=PLiPcpR6GRx5cGyfQESK6ZAj4My8rJidt4</li>
 <li>The second series: https://www.youtube.com/watch?v=oYndzPxZ7yg&index=1&list=PLXb2nCJdzD9B26kI9vEds-0bQoPSWj5--</li></ul></li>
-<li>Examples and recipes: https://github.com/wingmingchan/php-cascade-ws-ns-examples</li>
+<li>Examples and recipes: https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples</li>
 <li>Asset classes API: http://www.upstate.edu/web-services/api/asset-classes/index.php</li>
 <li>Cascade Web Services courses: http://www.upstate.edu/web-services/courses/index.php</li>
 <li>Cascade Web Services Library Support: https://groups.google.com/forum/#!forum/cascade-web-services-library-support</li>

@@ -49,8 +49,8 @@ use cascade_ws_property  as p;
 </description>
 <postscript><h2>Recipes</h2>
 <ul>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/recipes/synching/auth_sandbox_production.php">auth_sandbox_production.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/recipes/synching/dev_app_synch_common_assets.php">dev_app_synch_common_assets.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/recipes/synching/auth_sandbox_production.php">auth_sandbox_production.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/recipes/synching/dev_app_synch_common_assets.php">dev_app_synch_common_assets.php</a></li>
 </ul></postscript>
 </documentation>
 */

@@ -56,7 +56,7 @@ use cascade_ws_asset     as a;
 <li>Possible values of a multiple-item field can be retrieved using the <code>getItems</code> method.</li>
 </ul>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/property-class-test-code/structured_data_node.php">structured_data_node.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/property-class-test-code/structured_data_node.php">structured_data_node.php</a></li></ul></postscript>
 </documentation>
 */
 class StructuredDataNodePhantom extends Property

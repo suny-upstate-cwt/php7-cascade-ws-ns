@@ -46,7 +46,7 @@ use cascade_ws_asset     as a;
 <li>A <code>StructuredData</code> object contains a <code>a\DataDefinition</code> object so that it can pass it along to its children.</li>
 </ul>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/property-class-test-code/structured_data.php">structured_data.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/property-class-test-code/structured_data.php">structured_data.php</a></li></ul></postscript>
 </documentation>
 */
 class StructuredDataPhantom extends Property

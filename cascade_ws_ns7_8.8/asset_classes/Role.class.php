@@ -111,7 +111,7 @@ return $doc_string;
   "id":"23"
 }
 </pre>
-<h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/role.php">role.php</a></li></ul>
+<h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/role.php">role.php</a></li></ul>
 </postscript>
 </documentation>
 */

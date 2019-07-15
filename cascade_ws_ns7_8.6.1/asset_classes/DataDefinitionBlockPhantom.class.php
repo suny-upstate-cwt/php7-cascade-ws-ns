@@ -138,10 +138,10 @@ xhtmlDataDefinitionBlock
 </pre>
 </description>
 <postscript><h2>Test Code</h2><ul>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/data_block.php">data_block.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/dd_block_multiple_fields.php">dd_block_multiple_fields.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/dd_block_multiple_text.php">dd_block_multiple_text.php</a></li>
-<li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/xhtml_block.php">xhtml_block.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/data_block.php">data_block.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/dd_block_multiple_fields.php">dd_block_multiple_fields.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/dd_block_multiple_text.php">dd_block_multiple_text.php</a></li>
+<li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/xhtml_block.php">xhtml_block.php</a></li>
 </ul>
 <h2>JSON Dump</h2>
 <pre>{ "asset":{

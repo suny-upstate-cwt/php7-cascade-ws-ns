@@ -17,7 +17,7 @@ namespace cascade_ws_utility;
 <documentation><description><h2>Introduction</h2>
 <p>This class can be used to output a string or any object, with additional information on the source of the method call.</p>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/debug-utility.php">debug-utility.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/debug-utility.php">debug-utility.php</a></li></ul></postscript>
 </documentation>
 */
 class DebugUtility

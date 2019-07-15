@@ -24,7 +24,7 @@ that only one <code>Cache</code> object is allowed. The constructor cannot be ca
 it is <code>private</code>. Instead, call <code>u\Cache::getInstance( $service )</code> to
 get the cache.</p>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/cache.php">cache.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/cache.php">cache.php</a></li></ul></postscript>
 </documentation>
 */
 class Cache

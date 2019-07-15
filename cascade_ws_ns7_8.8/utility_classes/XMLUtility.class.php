@@ -13,7 +13,7 @@ namespace cascade_ws_utility;
 <documentation><description><h2>Introduction</h2>
 <p>This class provides XML utility services.</p>
 </description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/xml-utility.php">xml-utility.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/utility-class-test-code/xml-utility.php">xml-utility.php</a></li></ul></postscript>
 </documentation>
 */
 class XmlUtility

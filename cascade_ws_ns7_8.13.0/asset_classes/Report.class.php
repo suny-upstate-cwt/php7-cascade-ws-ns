@@ -197,8 +197,8 @@ use cascade_ws_property  as p;
 </pre>
 </description>
 <postscript><h2>Test Code</h2>
-<ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/report.php">report.php</a></li></ul>
-<h2>Recipes</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/tree/master/recipes/report">report</a></li></ul></postscript>
+<ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/report.php">report.php</a></li></ul>
+<h2>Recipes</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/tree/master/recipes/report">report</a></li></ul></postscript>
 </documentation>
 */
 class Report

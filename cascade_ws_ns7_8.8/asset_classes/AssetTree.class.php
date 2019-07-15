@@ -47,7 +47,7 @@ use cascade_ws_property  as p;
 <li>Generating reports: Everything inside the root container represented by an <code>AssetTree</code> object is visited when the <code>AssetTree::traverse</code> method is called. When a child is visited, the information it holds can be examined, and if necessary, stored. Therefore, we can use this mechanism to gather information of all descendants in the root container.</li>
 <li>Modifying assets: When a child is visited, we can actually modify it. Parameters can be passed in and used to modify any descendants in the root container.</li>
 </ul></description>
-<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/asset_tree.php">asset_tree.php</a></li></ul></postscript>
+<postscript><h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/asset-class-test-code/asset_tree.php">asset_tree.php</a></li></ul></postscript>
 </documentation>
 */
 class AssetTree

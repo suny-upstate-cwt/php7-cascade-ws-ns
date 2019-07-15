@@ -115,7 +115,7 @@ return $doc_string;
   string(4) "none"
 }
 </pre>
-<h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/property-class-test-code/access_rights_information.php">access_rights_information.php</a></li></ul></postscript>
+<h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/property-class-test-code/access_rights_information.php">access_rights_information.php</a></li></ul></postscript>
 </documentation>
 */
 class AccessRightsInformation extends Property

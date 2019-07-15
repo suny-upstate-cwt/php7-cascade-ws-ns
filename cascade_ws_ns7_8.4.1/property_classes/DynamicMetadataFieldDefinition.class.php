@@ -61,7 +61,7 @@ return $doc_string;
 it cannot have possible values. For other types, the property must have at least one possible value (which can be <code>NULL</code>).
 Therefore, all methods related to <code>possibleValue</code> should not be invoked through an <code>DynamicMetadataFieldDefinition</code>
 object of type <code>text</code>.</p>
-<h2>Test Code</h2><ul><li><a href="https://github.com/wingmingchan/php-cascade-ws-ns-examples/blob/master/property-class-test-code/dynamic_metadata_field_definition.php">dynamic_metadata_field_definition.php</a></li></ul></postscript>
+<h2>Test Code</h2><ul><li><a href="https://github.com/suny-upstate-cwt/php-cascade-ws-ns-examples/blob/master/property-class-test-code/dynamic_metadata_field_definition.php">dynamic_metadata_field_definition.php</a></li></ul></postscript>
 </documentation>
 */class DynamicMetadataFieldDefinition extends Property
 {
