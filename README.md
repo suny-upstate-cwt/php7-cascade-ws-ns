@@ -1,13 +1,22 @@
 # php7-cascade-ws-ns
-<p><strong>cascade_ws_ns7_8.13.0 is in progress.</strong></p>
+<p>This is the new home of SUNY Upstate's Cascade web service library.</p>
 
-<p>The Upstate Cascade web service library, using namespaces, written in PHP 7 for Cascade 8.11/8.12, by German Drulyk and Wing Ming Chan.</p>
+<p>This library was started by and almost exclusively built by Wing Ming Chan. We would like to extend a huge thank you to Wing for all of his hard work and dedication in making this the most comprehensive tool for interacting with Cascade CMS's web services.</p>
 
-<p>Last modified: 6/28/2019, 11:00 AM</p>
+<p>Wing is a huge proponent of creating reusable code which adheres to OOP best practices and we will uphold those values as we continue updating the library well after Wing retires from SUNY Upstate.</p>
+
+<h2>About</h2>
+
+<p>The SUNY Upstate Cascade web service library, using namespaces, written in PHP 7 for Cascade 8.11/8.12, by German Drulyk and Wing Ming Chan.</p>
+
+<p>Last modified: 7/15/2019, 11:34 AM</p>
 
 <p>Note that new code related to namingRuleAssets does not work for SOAP due to a bug.</p>
 
 <p>This version of the library makes use of features in PHP 7.</p>
+
+<h2>cascade_ws_ns7_8.13.0 is in progress.</h2>
+<p>Development has begun on cascade_ws_ns7_8.13.0 which will introduce Custom Workflow Email capabilities.</p>
 
 <h2>Purpose of the Upgrade</h2>
 <p>The library has been upgraded to PHP 7 for two main reasons:</p>
