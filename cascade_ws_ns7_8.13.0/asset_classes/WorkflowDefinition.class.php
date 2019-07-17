@@ -231,6 +231,15 @@ displays the XML definition, and returns the calling object.</p></description>
         bool $exception=true 
     ) : Asset
     {
+        if(
+            !$this->wf_email_manual_assign[ 'notification' ] ||
+            !$this->wf_email_manual_assign[ 'completed' ]
+        )
+        {
+            throw new e\OperationDisabledException( 
+                S_SPAN . 'Editing workflowDefinition without setting both the notification and completed workflow email is currently not allowed because 8.13 fails to provide the data when reading the workflowDefinition object.' . E_SPAN );
+        }
+        
         $asset                                    = new \stdClass();
         $asset->{ $p = $this->getPropertyName() } = $this->getProperty();
         
@@ -723,10 +732,11 @@ and returns the calling object.</p></description>
 <exception></exception>
 </documentation>
 */
-    public function setCompletedWorkflowEmail( WorkflowEmail $wfe ) : Asset
+    public function setCompletedWorkflowEmail( WorkflowEmail $wfe=NULL ) : Asset
     {
-        $this->getProperty()->completedWorkflowEmailId = $wfe->getID();
-        $this->getProperty()->completedWorkflowEmailPath = $wfe->getPath();
+        $this->wf_email_manual_assign[ 'completed' ] = true;
+        $this->getProperty()->completedWorkflowEmailId = ( isset( $wfe ) ? $wfe->getID() : NULL );
+        $this->getProperty()->completedWorkflowEmailPath = ( isset( $wfe ) ? $wfe->getPath() : NULL );
         return $this;
     }
     
@@ -737,10 +747,11 @@ and returns the calling object.</p></description>
 <exception></exception>
 </documentation>
 */
-    public function setNotificationWorkflowEmail( WorkflowEmail $wfe ) : Asset
+    public function setNotificationWorkflowEmail( WorkflowEmail $wfe=NULL ) : Asset
     {
-        $this->getProperty()->notificationWorkflowEmailId = $wfe->getID();
-        $this->getProperty()->notificationWorkflowEmailPath = $wfe->getPath();
+        $this->wf_email_manual_assign[ 'notification' ] = true;
+        $this->getProperty()->notificationWorkflowEmailId = ( isset( $wfe ) ? $wfe->getID() : NULL );
+        $this->getProperty()->notificationWorkflowEmailPath = ( isset( $wfe ) ? $wfe->getPath() : NULL );
         return $this;
     }
     
@@ -794,5 +805,6 @@ and returns the calling object.</p></description>
     private $ordered_step_map;
     private $non_ordered_step_map;
     private $triggers;
+    private $wf_email_manual_assign = [ 'notification' => false, 'completed' => false ];
 }
 ?>
