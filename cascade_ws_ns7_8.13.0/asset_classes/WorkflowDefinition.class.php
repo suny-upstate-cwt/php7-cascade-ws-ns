@@ -220,7 +220,7 @@ displays the XML definition, and returns the calling object.</p></description>
 <documentation><description><p>Edits and returns the calling object.</p></description>
 <example></example>
 <return-type>Asset</return-type>
-<exception>EditingFailureException</exception>
+<exception>EditingFailureException, OperationDisabledException</exception>
 </documentation>
 */
     public function edit(
