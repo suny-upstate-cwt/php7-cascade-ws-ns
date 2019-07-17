@@ -1,9 +1,10 @@
 <?php 
 /**
-  * Author: Wing Ming Chan
-  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu>
+  * Authors: Wing Ming Chan & German Drulyk
+  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> & German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
+  * 7/17/2019 Updated docs with accessWorkflowEmails.
   * 6/28/2017 Replaced static WSDL code with call to getXMLFragments.
   * Removed JSON dump. Updated documentation.
   * 1/24/2018 Updated documentation.

@@ -1,14 +1,15 @@
 <?php
 /**
-  * Author: Wing Ming Chan
-  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu>
+  * Authors: Wing Ming Chan & German Drulyk
+  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> & German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
-  * 11/2/2018 Added accessSharedFields and related methods.
-  * 1/4/2018 Added missing properties and methods for 8.7.1.
-  * 6/29/2017 Rewrote code for 8.4.1.
-  * 6/12/2017 Added WSDL.
-  * 5/28/2015 Added namespaces.
+  *  7/17/2019 Added constants related to workflow email.
+  *  11/2/2018 Added accessSharedFields and related methods.
+  *  1/4/2018 Added missing properties and methods for 8.7.1.
+  *  6/29/2017 Rewrote code for 8.4.1.
+  *  6/12/2017 Added WSDL.
+  *  5/28/2015 Added namespaces.
  */
 namespace cascade_ws_property;
 

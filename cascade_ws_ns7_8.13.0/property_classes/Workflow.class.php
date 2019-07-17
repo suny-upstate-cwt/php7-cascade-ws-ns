@@ -1,9 +1,11 @@
 <?php
 /**
-  * Author: Wing Ming Chan
-  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu>
+  * Authors: Wing Ming Chan & German Drulyk
+  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> & German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
+  * 7/17/2019 Added workflow email related variables but Cascade 8.13 fails to fetch workflows
+  *           when a workflow email is attached.
   * 7/18/2017 Replaced static WSDL code with call to getXMLFragments.
   * 6/13/2017 Added WSDL.
   * 12/22/2016 Minor bug fixes.

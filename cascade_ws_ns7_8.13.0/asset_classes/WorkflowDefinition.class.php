@@ -1,7 +1,7 @@
 <?php 
 /**
-  * Authors: Wing Ming Chan and German Drulyk
-  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> and German Drulyk <drulykg@upstate.edu>
+  * Authors: Wing Ming Chan & German Drulyk
+  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> & German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
   * 7/17/2019 Added methods to deal with workflow emails

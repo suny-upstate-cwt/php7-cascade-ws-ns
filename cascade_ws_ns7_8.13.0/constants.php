@@ -1,10 +1,10 @@
 <?php
 /**
-  * Author: Wing Ming Chan & German Drulyk
+  * Authors: Wing Ming Chan & German Drulyk
   * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> & German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
-  *  7/11/2019 Added constants related to workflow email
+  *  7/11/2019 Added constants related to workflow email.
   *  11/2/2018 Added constants related to shared fields.
   *  2/2/2018 Added NULL_CASCADE.
   *  9/28/2017 Added cloud transport-related constants.

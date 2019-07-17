@@ -1,9 +1,10 @@
 <?php 
 /**
-  * Author: Wing Ming Chan
-  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu>
+  * Authors: Wing Ming Chan & German Drulyk
+  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> & German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
+  * 7/17/2019 Added rootWorkflowEmailContainerId.
   * 2/25/2019 Added missing getLinkCheckEnabled.
   * 11/2/2018 Added fields and get methods for 8.11. No setters yet.
   * 5/22/2018 Added listEditorConfigurations. However, there is a bug in SOAP, as of 8.9.1.
