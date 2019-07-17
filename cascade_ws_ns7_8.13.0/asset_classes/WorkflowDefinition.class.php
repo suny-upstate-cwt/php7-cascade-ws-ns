@@ -1,9 +1,10 @@
 <?php 
 /**
-  * Author: Wing Ming Chan
-  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu>
+  * Authors: Wing Ming Chan and German Drulyk
+  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu> and German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
+  * 7/17/2019 Added methods to deal with workflow emails
   * 1/24/2018 Updated documentation.
   * 1/3/2018 Added code to test for NULL.
   * 11/27/2017 Added move-related methods.
@@ -407,6 +408,94 @@ representing the workflow definition. This method is used by <code>WorkflowSetti
     {
         return $this->ordered_steps;
     }
+
+/**
+<documentation><description><p>Returns a <code>WorkflowEmail object</code>.</p></description>
+<example>echo $wfd->getCompletedWorkflowEmail(), BR;</example>
+<return-type>WorkflowEmail</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getCompletedWorkflowEmail() : WorkflowEmail
+    {
+        return new WorkflowEmail(
+            $this->getService(), $this->getService()->createId( 
+                WorkflowEmail::TYPE, 
+                $this->getCompletedWorkflowEmailId() )
+        );
+    }
+
+/**
+<documentation><description><p>Returns <code>completedWorkflowEmailId</code>.</p></description>
+<example>echo u\StringUtility::getCoalescedString( $wfd->getCompletedWorkflowEmailId() ), BR;</example>
+<return-type>mixed</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getCompletedWorkflowEmailId() 
+    {
+        if( isset( $this->getProperty()->completedWorkflowEmailId ) )
+            return $this->getProperty()->completedWorkflowEmailId;
+        return NULL;
+    }
+
+/**
+<documentation><description><p>Returns <code>completedWorkflowEmailPath</code>.</p></description>
+<example>echo u\StringUtility::getCoalescedString( $wfd->getCompletedWorkflowEmailPath() ), BR;</example>
+<return-type>mixed</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getCompletedWorkflowEmailPath() 
+    {
+        if( isset( $this->getProperty()->completedWorkflowEmailPath ) )
+            return $this->getProperty()->completedWorkflowEmailPath;
+        return NULL;
+    }
+
+/**
+<documentation><description><p>Returns a <code>WorkflowEmail object</code>.</p></description>
+<example>echo $wfd->getNotificationWorkflowEmail(), BR;</example>
+<return-type>WorkflowEmail</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getNotificationWorkflowEmail() : WorkflowEmail
+    {
+        return new WorkflowEmail(
+            $this->getService(), $this->getService()->createId( 
+                WorkflowEmail::TYPE, 
+                $this->getProperty()->notificationWorkflowEmailId() )
+        );
+    }
+
+/**
+<documentation><description><p>Returns <code>notificationWorkflowEmailId</code>.</p></description>
+<example>echo u\StringUtility::getCoalescedString( $wfd->getNotificationWorkflowEmailId() ), BR;</example>
+<return-type>mixed</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getNotificationWorkflowEmailId() 
+    {
+        if( isset( $this->getProperty()->notificationWorkflowEmailId ) )
+            return $this->getProperty()->notificationWorkflowEmailId;
+        return NULL;
+    }
+
+/**
+<documentation><description><p>Returns <code>notificationWorkflowEmailPath</code>.</p></description>
+<example>echo u\StringUtility::getCoalescedString( $wfd->getNotificationWorkflowEmailPath() ), BR;</example>
+<return-type>mixed</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getNotificationWorkflowEmailPath() 
+    {
+        if( isset( $this->getProperty()->notificationWorkflowEmailPath ) )
+            return $this->getProperty()->notificationWorkflowEmailPath;
+        return NULL;
+    }
     
 /**
 <documentation><description><p>Returns <code>xml</code>.</p></description>
@@ -624,6 +713,34 @@ and returns the calling object.</p></description>
                 S_SPAN . c\M::EMPTY_XML . E_SPAN );
             
         $this->getProperty()->xml = $xml;
+        return $this;
+    }
+    
+/**
+<documentation><description><p>Sets <code>completedWorkflowEmailId</code> and <code>completedWorkflowEmailPath</code> and returns the calling object.</p></description>
+<example></example>
+<return-type>Asset</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function setCompletedWorkflowEmail( WorkflowEmail $wfe ) : Asset
+    {
+        $this->getProperty()->completedWorkflowEmailId = $wfe->getID();
+        $this->getProperty()->completedWorkflowEmailPath = $wfe->getPath();
+        return $this;
+    }
+    
+/**
+<documentation><description><p>Sets <code>notificationWorkflowEmailId</code> and <code>notificationWorkflowEmailPath</code> and returns the calling object.</p></description>
+<example></example>
+<return-type>Asset</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function setNotificationWorkflowEmail( WorkflowEmail $wfe ) : Asset
+    {
+        $this->getProperty()->notificationWorkflowEmailId = $wfe->getID();
+        $this->getProperty()->notificationWorkflowEmailPath = $wfe->getPath();
         return $this;
     }
     

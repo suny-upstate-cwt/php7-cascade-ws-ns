@@ -39,6 +39,7 @@ accessPublishSets
 accessSharedFields
 accessTransports
 accessWorkflowDefinitions
+accessWorkflowEmails
 activateDeleteVersions
 alwaysAllowedToToggleDataChecks
 assignApproveWorkflowSteps
@@ -134,6 +135,8 @@ class SiteAbilities extends Property
             $this->access_transports         = $a->accessTransports;
         if( isset( $a->accessWorkflowDefinitions ) )
             $this->access_workflow_definitions = $a->accessWorkflowDefinitions;
+        if( isset( $a->accessWorkflowEmails ) )
+            $this->access_workflow_definitions = $a->accessWorkflowEmails;
         if( isset( $a->activateDeleteVersions ) )
             $this->activate_delete_versions  = $a->activateDeleteVersions;
         if( isset( $a->alwaysAllowedToToggleDataChecks ) )
@@ -375,6 +378,17 @@ class SiteAbilities extends Property
     public function getAccessWorkflowDefinitions() : bool
     {
         return $this->access_workflow_definitions;
+    }
+    
+/**
+<documentation><description><p>Returns <code>accessWorkflowEmails</code>.</p></description>
+<example></example>
+<return-type></return-type>
+</documentation>
+*/
+    public function getAccessWorkflowEmails() : bool
+    {
+        return $this->access_workflow_emails;
     }
     
 /**
@@ -1002,6 +1016,19 @@ class SiteAbilities extends Property
     }
     
 /**
+<documentation><description><p>Sets <code>accessWorkflowEmails</code> and returns the calling object.</p></description>
+<example></example>
+<return-type></return-type>
+</documentation>
+*/
+    public function setAccessWorkflowEmails( bool $bool ) : Property
+    {
+        $this->checkBoolean( $bool );
+        $this->access_workflow_emails = $bool;
+        return $this;
+    }
+    
+/**
 <documentation><description><p>Sets <code>activateDeleteVersions</code> and returns the calling object.</p></description>
 <example></example>
 <return-type></return-type>
@@ -1533,6 +1560,7 @@ class SiteAbilities extends Property
         $obj->accessTransports                        = $this->access_transports;
         $obj->accessWorkflowDefinitions               =
             $this->access_workflow_definitions;
+        $obj->accessWorkflowEmails                    = $this->access_workflow_emails;
         $obj->activateDeleteVersions                  = $this->activate_delete_versions;
         $obj->alwaysAllowedToToggleDataChecks         =
             $this->always_allowed_to_toggle_data_checks;
@@ -1611,6 +1639,7 @@ class SiteAbilities extends Property
     private $access_shared_fields;
     private $access_transports;
     private $access_workflow_definitions;
+    private $access_workflow_emails;
     private $activate_delete_versions;
     private $always_allowed_to_toggle_data_checks;
     private $assign_approve_workflow_steps;

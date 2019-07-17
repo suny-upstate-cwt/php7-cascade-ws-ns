@@ -363,6 +363,10 @@ class Workflow extends Property
     private $action_id_identifier_map;
     private $start_date;
     private $end_date;
+    private $completed_workflow_email_id;
+    private $completed_workflow_email_path;
+    private $notification_workflow_email_id;
+    private $notification_workflow_email_path;
     //private $service;
 }
 ?>

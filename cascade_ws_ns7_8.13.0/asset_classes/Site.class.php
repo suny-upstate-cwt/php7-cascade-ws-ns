@@ -100,6 +100,7 @@ site
   rootSiteDestinationContainerId
   rootTransportContainerId
   rootWorkflowDefinitionContainerId
+  rootWorkflowEmailContainerId (8.13)
 </pre>
 <h2>Design Issues</h2>
 <p>There is something special about all <code>ScheduledPublishing</code> assets: right after such an asset is read from Cascade, if we send the asset back to Cascade by calling <code>edit</code>, even without making any changes to it, Cascade will reject the asset. To fix this problem, we have to call <code>unset</code> to unset any property related to scheduled publishing if the property stores a <code>NULL</code> value. This must be done inside <code>edit</code>, or an exception will be thrown.</p>
@@ -236,6 +237,8 @@ object(stdClass)#17 (53) {
   string(32) "3e15e4f80a00016b00677c0a8367f963"
   ["rootWorkflowDefinitionContainerId"]=>
   string(32) "3e15e52a0a00016b00677c0a70e2365b"
+  ["rootWorkflowEmailContainerId"]=>
+  string(32) "dce5823e8b7ffea932e1518033411f0a"
 }
 </pre>
 <h2>JSON Dump</h2>
@@ -270,6 +273,7 @@ object(stdClass)#17 (53) {
       "rootSiteDestinationContainerId":"0fa6f7f58b7ffe8343b94c28d64b3e7e",
       "rootTransportContainerId":"0fa6f7e98b7ffe8343b94c28a1414bed",
       "rootWorkflowDefinitionContainerId":"0fa6f8038b7ffe8343b94c28997165ca",
+      "rootWorkflowEmailContainerId":"dce5823e8b7ffea932e1518033411f0a",
       "rootConnectorContainerId":"0fa6f7878b7ffe8343b94c28eecf4668",
       "unpublishOnExpiration":true,
       "linkCheckerEnabled":true,
@@ -1365,6 +1369,52 @@ shared field container.</p></description>
     }
 
 /**
+<documentation><description><p>Returns a <code>WorkflowEmailContainer</code> object representing the root workflow email container.</p></description>
+<example>$wdc = $s->getRootWorkflowEmailContainer();</example>
+<return-type>Asset</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getRootWorkflowEmailContainer() : Asset
+    {
+        if( is_null( $this->root_workflow_email_container ) )
+        {
+            $this->root_workflow_email_container = 
+                Asset::getAsset(
+                    $this->getService(),
+                    WorkflowEmailContainer::TYPE, 
+                    $this->getProperty()->rootWorkflowEmailContainerId );
+        }
+        return $this->root_workflow_email_container;
+    }
+
+/**
+<documentation><description><p>Returns an <code>AssetTree</code> object rooted at the root workflow email container.</p></description>
+<example>u\DebugUtility::dump( u\XMLUtility::replaceBrackets( 
+    $s->getRootWorkflowEmailContainerAssetTree()->
+    toXml() ) );</example>
+<return-type>AssetTree</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getRootWorkflowEmailContainerAssetTree() : AssetTree
+    {
+        return $this->getRootWorkflowEmailContainer()->getAssetTree();
+    }
+
+/**
+<documentation><description><p>Returns <code>rootWorkflowEmailContainerId</code>.</p></description>
+<example>echo $s->getRootWorkflowEmailContainerId(), BR;</example>
+<return-type>string</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function getRootWorkflowEmailContainerId() : string
+    {
+        return $this->getProperty()->rootWorkflowEmailContainerId;
+    }
+
+/**
 <documentation><description><p>Returns <code>scheduledPublishDestinationMode</code>.</p></description>
 <example>echo u\StringUtility::getCoalescedString(
     $s->getScheduledPublishDestinationMode() ), BR;</example>
@@ -2121,6 +2171,7 @@ will be set to <code>false</code>.</p></description>
     private $root_site_destination_container;
     private $root_transport_container;
     private $root_workflow_definition_container;
+    private $root_workflow_email_container;
     private $root_site_asset_factory_container;
 }
 ?>

@@ -154,6 +154,7 @@ return $doc_string;
         "accessDestinations":true,
         "accessTransports":true,
         "accessWorkflowDefinitions":true,
+        "accessWorkflowEmails":true,
         "accessContentTypes":true,
         "accessConnectors":true,
         "publishReadableAdminAreaAssets":true,
