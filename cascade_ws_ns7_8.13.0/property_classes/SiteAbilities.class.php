@@ -24,7 +24,7 @@ use cascade_ws_asset     as a;
 <description>
 <?php global $service;
 $doc_string = "<h2>Introduction</h2>
-<p>A <code>SiteAbilities</code> object represents the <code>siteAbilities</code> property found in a role asset. As of Cascade 8.11, there are 53 of them.</p>
+<p>A <code>SiteAbilities</code> object represents the <code>siteAbilities</code> property found in a role asset. As of Cascade 8.13, there are 54 of them.</p>
 <h2>Properties of <code>siteAbilities</code></h2>
 <pre>accessAssetFactories
 accessAudits
