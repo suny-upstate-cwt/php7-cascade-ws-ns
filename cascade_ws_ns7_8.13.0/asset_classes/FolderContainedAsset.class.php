@@ -1,9 +1,10 @@
 <?php 
 /**
-  * Author: Wing Ming Chan
-  * Copyright (c) 2019 Wing Ming Chan <chanw@upstate.edu>
+  * Author: Wing Ming Chan, German Drulyk
+  * Copyright (c) 2020 Wing Ming Chan <chanw@upstate.edu>, German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
+  * 7/15/2020 - drulykg - Fixed addTag() function so that it doesn't lose previous tag(s)
   * 6/28/2019 Added more documentation.
   * Added addTags and changed code in addTag, using the class variable tags to cache.
   * 10/12/2018 Fixed bugs in addTag, isInTags and removeTag.
@@ -88,8 +89,8 @@ abstract class FolderContainedAsset extends ContainedAsset
                 {
                 	$cur_tag = $this->tags;
                 	$this->tags = array();
-                	$this->tags = $cur_tag;
-                	$this->tags = $std;
+                	$this->tags[] = $cur_tag;
+                	$this->tags[] = $std;
                 }
             }
             // tag not in array
