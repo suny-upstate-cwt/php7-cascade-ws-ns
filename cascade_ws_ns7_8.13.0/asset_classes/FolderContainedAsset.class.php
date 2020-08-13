@@ -4,6 +4,10 @@
   * Copyright (c) 2020 Wing Ming Chan <chanw@upstate.edu>, German Drulyk <drulykg@upstate.edu>
   * MIT Licensed
   * Modification history:
+  * 8/13/2020 - drulykg - Added removeTags()
+  *                       Added removeAllTags()
+  *                       Added private setTagsProperty()
+  *                       Fixed $this->tags to be more universal
   * 7/15/2020 - drulykg - Fixed addTag() function so that it doesn't lose previous tag(s)
   * 6/28/2019 Added more documentation.
   * Added addTags and changed code in addTag, using the class variable tags to cache.
@@ -51,14 +55,23 @@ abstract class FolderContainedAsset extends ContainedAsset
         
         if( $this->getService()->isSoap() )
         {
-        	// could be NULL
+        	// not set if no tags exist
         	if( isset( $this->getProperty()->tags->tag ) )
         	{
-        		$this->tags = $this->getProperty()->tags->tag; 
+                // check if single tag or multiple and standardize into array
+                if( isset( $this->getProperty()->tags->tag->name ) )
+                {
+                    $this->tags = array( $this->getProperty()->tags->tag );
+                }
+        		else
+                {
+                    $this->tags = $this->getProperty()->tags->tag;
+                }
         	}
         }
         elseif( $this->getService()->isRest() )
         {
+            // REST is expected to always contain an array
         	$this->tags = $this->getProperty()->tags;
         }
     }
@@ -72,44 +85,18 @@ abstract class FolderContainedAsset extends ContainedAsset
 */
     public function addTag( string $t ) : Asset
     {
-        $std = new \stdClass();
-        $std->name = $t;
+        $t = trim( $t );
         
-        if( $this->getService()->isSoap() )
+        if( $t !== '' && !$this->isInTags( $t ) )
         {
-            // empty
-            if( !isset( $this->tags ) )
-            {
-                $this->tags = $std;
-            }
-            // one other tag
-            elseif( !is_array( $this->tags ) )
-            {
-                if( $this->tags->name != $t )
-                {
-                	$cur_tag = $this->tags;
-                	$this->tags = array();
-                	$this->tags[] = $cur_tag;
-                	$this->tags[] = $std;
-                }
-            }
-            // tag not in array
-            elseif( !in_array( $std, $this->tags ) )
-            {
-                $this->tags[] = $std;
-            }
-
-        	$this->getProperty()->tags->tag = $this->tags; 
-        }
-        elseif( $this->getService()->isRest() )
-        {
-            if( !in_array( $std, $this->tags ) )
-            {
-                $this->tags[] = $std;
-            }
+            $std = new \stdClass();
+            $std->name = $t;
             
-            $this->getProperty()->tags = $this->tags;
+            $this->tags[] = $std;
+            
+            $this->setTagsProperty();
         }
+        
         return $this;
     }
 
@@ -124,13 +111,8 @@ abstract class FolderContainedAsset extends ContainedAsset
     {
 		foreach( $a as $s )
 		{
-			if( !is_string( $s ) )
+			if( is_string( $s ) )
 			{
-				continue;
-			}
-			else
-			{
-				$s_trimmed = trim( $s );
 				$this->addTag( $s );
 			}
 		}
@@ -233,42 +215,15 @@ the <code>tags</code> property.</p></description>
 */
     public function isInTags( string $t ) : bool
     {
-    	if( $this->getService()->isSoap() )
-    	{
-    		if( !isset( $this->getProperty()->tags->tag ) )
-    		{
-    			return false;
-    		}
-    		elseif( !is_array( $this->getProperty()->tags->tag ) )
-            {
-            	if( $this->getProperty()->tags->tag->name != $t )
-            		return false;
-            	else
-            		return true;
-            }
-            else
-            {
-            	foreach( $this->getProperty()->tags->tag as $tag )
-            	{
-            		if( $tag->name == $t )
-            		{
-            			return true;
-            		}
-            	}
-            	return false;
-            }
-        }
-        elseif( $this->getService()->isRest() )
+        foreach( $this->tags as $tag )
         {
-        	$std = new \stdClass();
-        	$std->name = $t;
-        	
-        	if( in_array( $std, $this->getProperty()->tags ) )
-        	{
-        		return true;
-        	}
-        	return false;
+            if( $tag->name === $t )
+            {
+                return true;
+            }
         }
+        
+        return false;
     }
     
 /**
@@ -280,51 +235,88 @@ the <code>tags</code> property.</p></description>
 */
     public function removeTag( string $t ) : Asset
     {
-    	if( $this->isInTags( $t ) )
-    	{
-    		if( $this->getService()->isSoap() )
-        	{
-        		if( isset( $this->getProperty()->tags->tag ) )
-        		{
-        			// the only tag
-        			if( !is_array( $this->getProperty()->tags->tag ) &&
-        				$this->getProperty()->tags->tag->name == $t )
-        			{
-        				$this->getProperty()->tags = new \stdClass();
-        			}
-        			else
-        			{
-        				$temp = array();
-        				
-        				foreach( $this->getProperty()->tags->tag as $tag )
-        				{
-        					if( $tag->name != $t )
-        					{
-        						$temp[] = $tag;
-        					}
-        				}
-        				$this->getProperty()->tags->tag = $temp;
-        			}
-        		}
-        	}
-    		elseif( $this->getService()->isRest() )
-        	{
-        		$temp = array();
-        		
-        		foreach( $this->getProperty()->tags as $tag )
-        		{
-        			if( $tag->name != $t )
-        			{
-        				$temp[] = $tag;
-        			}
-        		}
-        		$this->getProperty()->tags = $temp;
-        	}
-    	}
+        foreach( $this->tags as $k => $tag )
+        {
+            if( $tag->name === $t )
+            {
+                unset( $this->tags[ $k ] );
+                
+                // tags must be sequential or else edit will fail
+                $this->tags = array_values( $this->tags );
+            }
+        }
+        
+        $this->setTagsProperty();
     	
     	return $this;
     }
     
-    private $tags;
+/**
+<documentation><description><p>Removes specified tags, if they exist, and returns the calling object.</p></description>
+<example>$page->removeTags( array( "education", "apple" ) )->edit();</example>
+<return-type>Asset</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function removeTags( array $a ) : Asset
+    {
+        foreach( $a as $s )
+		{
+			if( is_string( $s ) )
+			{
+				$this->removeTag( $s );
+			}
+		}
+        
+        return $this;
+    }
+    
+/**
+<documentation><description><p>Removes all tags and returns the calling object.</p></description>
+<example>$page->removeAllTags()->edit();</example>
+<return-type>Asset</return-type>
+<exception></exception>
+</documentation>
+*/
+    public function removeAllTags() : Asset
+    {
+        $this->tags = array();
+        
+        $this->setTagsProperty();
+        
+        return $this;
+    }
+    
+/**
+<documentation><description><p>Set the tags property of the object. Normalized regardless of SOAP or REST.</p></description>
+<example>$this->setTagsProperty();</example>
+<return-type>void</return-type>
+<exception></exception>
+</documentation>
+*/
+    private function setTagsProperty()
+    {
+        if( $this->getService()->isSoap() )
+        {
+            if( count( $this->tags ) === 0 )
+            {
+                $this->getProperty()->tags = new \stdClass();
+            }
+            elseif( count( $this->tags ) === 1 )
+            {
+                $this->getProperty()->tags->tag = $this->tags[ 0 ];
+            }
+            else
+            {
+                $this->getProperty()->tags->tag = $this->tags;
+            }
+        }
+        elseif( $this->getService()->isRest() )
+        {
+            $this->getProperty()->tags = $this->tags;
+        }
+    }
+    
+    private $tags = array();
 }
 ?>
